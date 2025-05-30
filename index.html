@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 글 생성기 (React + Importmap)</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0-beta-94eed63c49-20240425/client",
+    "@google/generative-ai": "https://esm.sh/@google/generative-ai@^0.12.0",
+    "react/jsx-runtime": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425/jsx-runtime",
+    "react/jsx-dev-runtime": "https://esm.sh/react@19.0.0-beta-94eed63c49-20240425/jsx-dev-runtime",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.0"
+  }
+}
+</script>
+</head>
+<body>
+    <noscript>이 앱을 실행하려면 JavaScript를 활성화해야 합니다.</noscript>
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
+<link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>

@@ -1,0 +1,1234 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f6f8; /* 전체 페이지 배경색 */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main App Container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ... (기존 App.css 내용 중 sidebar 관련 스타일은 제거하거나 수정) ... */
+
+/* 새로운 전체 앱 컨테이너 */
+.app-container-horizontal-tabs {
+  display: flex;
+  flex-direction: column; /* 위에서 아래로 배치 */
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f6f8;
+}
+
+/* 상단 헤더 (앱 제목 및 탭 네비게이션) */
+.top-header {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.app-title {
+  color: #1a73e8;
+  margin: 0 0 15px 0; 
+  font-size: 2em;
+  text-align: center;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+  width: 100%;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: -1px; 
+  flex-wrap: wrap; 
+}
+
+.tab-navigation .tab,
+.tab-navigation .active-tab {
+  padding: 12px 20px; 
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1.0em; 
+  font-weight: 500;
+  color: #5f6368; 
+  border-bottom: 3px solid transparent; 
+  transition: color 0.2s, border-bottom-color 0.2s;
+  white-space: nowrap; 
+}
+.tab-navigation .tab:hover {
+  color: #1a73e8;
+}
+.tab-navigation .active-tab {
+  color: #1a73e8; 
+  border-bottom: 3px solid #1a73e8; 
+}
+
+/* 메인 콘텐츠 영역 (탭 내용 표시) */
+.main-content-area {
+  flex-grow: 1; 
+  padding: 25px 30px; 
+  overflow-y: auto; 
+  background-color: #ffffff;
+  position: relative; 
+}
+
+.tab-pane { 
+}
+.tab-pane.active {
+  display: block; 
+}
+
+.tab-title { 
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+/* --- Enhanced Styles for Prompt Settings Tab (Toss UI Inspired) --- */
+.tab-pane .sidebar-section { 
+  margin-bottom: 25px;
+  padding: 30px; 
+  background-color: #fff; 
+  border: 1px solid #E2E8F0; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); 
+}
+
+.tab-pane .sidebar-section:last-child {
+  border-bottom: 1px solid #E2E8F0; 
+}
+
+.tab-pane .sidebar-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500; 
+  font-size: 0.875em; 
+  color: #4A5568; 
+}
+
+.tab-pane .sidebar-section input[type="text"],
+.tab-pane .sidebar-section select,
+.tab-pane .sidebar-section textarea {
+  width: 100%;
+  padding: 10px 14px; 
+  margin-bottom: 18px; 
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #E2E8F0; 
+  font-size: 0.95em;
+  background-color: #F7FAFC; 
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-pane .sidebar-section input[type="text"]:focus,
+.tab-pane .sidebar-section select:focus,
+.tab-pane .sidebar-section textarea:focus {
+  border-color: #3B82F6; 
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  outline: none;
+  background-color: #fff; 
+}
+
+.tab-pane .sidebar-section textarea {
+  min-height: 160px; 
+}
+
+.tab-pane .button-group {
+  display: flex;
+  gap: 12px; 
+  margin-top: 15px;
+}
+
+.tab-pane .button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500; 
+  font-size: 0.9em;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-pane .button-group button.primary { 
+  background-color: #3B82F6; 
+  color: white;
+}
+.tab-pane .button-group button.primary:hover {
+  background-color: #2563EB; 
+}
+
+.tab-pane .button-group button.danger { 
+  background-color: #F1F5F9; 
+  color: #EF4444; 
+  border: 1px solid #E2E8F0; 
+}
+.tab-pane .button-group button.danger:hover {
+  background-color: #E2E8F0; 
+  border-color: #CBD5E1; 
+}
+
+
+.tab-pane .community-list-container {
+  margin-top: 35px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.tab-pane .community-list-container h5 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #1F2937; 
+  font-size: 1.05em;
+  font-weight: 600; 
+}
+
+.tab-pane .community-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 280px;
+}
+
+.tab-pane .community-list li {
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  color: #374151; 
+}
+
+.tab-pane .community-list li:hover {
+  background-color: #F3F4F6; 
+}
+
+.tab-pane .community-list li.selected {
+  background-color: #EFF6FF; 
+  color: #2563EB; 
+  border-left: 3px solid #3B82F6; 
+  font-weight: 600;
+  padding-left: 12px; 
+}
+
+.tab-pane .community-list li .edit-indicator {
+  font-size: 0.8em; 
+  color: #3B82F6; 
+  font-style: normal; 
+  margin-left: 5px;
+}
+/* --- End of Enhanced Styles for Prompt Settings Tab --- */
+
+/* Inline Loader Styles */
+.inline-loader {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Increased gap for better spacing */
+  font-size: 0.9em;
+  color: #333; /* Darker text for better readability */
+  padding: 8px 12px; /* Add some padding */
+  background-color: #f0f0f0; /* Light background */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 10px; /* Space from the button */
+  border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+.inline-loader::before { /* Simple spinner */
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid rgba(0,0,0,0.1); /* Slightly thicker border */
+  border-radius: 50%;
+  border-top-color: #1a73e8; /* Primary color for spinner */
+  animation: inline-spin 0.8s linear infinite;
+}
+
+@keyframes inline-spin { 
+  to { transform: rotate(360deg); } 
+}
+
+.status-message { /* General class for inline status messages that might not include a spinner */
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  color: #495057;
+  border: 1px solid #ced4da;
+  font-size: 0.9em;
+}
+.status-message.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+
+/* 나머지 .input-section-main, .results-section, .result-block 등의 스타일은 이전과 유사하게 유지 또는 필요에 따라 조정 */
+.input-section-main {
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+.input-section-main h4 { margin-top: 0; margin-bottom: 20px; color: #1a73e8; font-size: 1.3em; }
+.input-section-main label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 1em; color: #333;}
+.input-section-main select,
+.input-section-main input[type="text"],
+.input-section-main input[type="range"], /* Added for review sliders */
+.input-section-main textarea { width: 100%; padding: 12px; margin-bottom: 20px; box-sizing: border-box; border-radius: 4px; border: 1px solid #ccc; font-size: 1em; }
+
+.input-section-main input[type="range"] {
+  padding: 0; /* Range inputs don't need vertical padding like text inputs */
+  margin-top: 5px;
+}
+
+.input-section-main textarea { min-height: 120px; resize: vertical; } 
+
+.input-section-main select:disabled,
+.input-section-main input[type="text"]:disabled,
+.input-section-main input[type="range"]:disabled,
+.input-section-main textarea:disabled {
+  background-color: #e9ecef; 
+  opacity: 0.7; 
+  cursor: not-allowed;
+}
+
+
+.input-section-main button.generate-button { 
+    padding: 12px 20px; width: 100%; background-color: #34a853; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1.1em; font-weight: bold;
+}
+.input-section-main button.generate-button:hover:not(:disabled) { background-color: #2a8c4a; }
+.input-section-main button.generate-button:disabled { background-color: #a5d6a7; cursor: not-allowed; opacity: 0.7; }
+
+
+.results-section { margin-top: 30px; }
+.result-block { margin-bottom: 30px; }
+.result-block h4 { color: #3c4043; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 8px;}
+.result-block h5 { 
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1em;
+  font-weight: normal;
+  color: #555;
+}
+.result-block h5 a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+.result-block h5 a:hover {
+  text-decoration: underline;
+}
+
+.result-block h4 .copy-button { padding: 6px 12px; font-size: 0.85em; background-color: #e8f0fe; color: #1a73e8; border: 1px solid #1a73e8; border-radius: 4px; cursor: pointer;}
+.result-block h4 .copy-button:hover { background-color: #d2e3fc; }
+.result-block textarea { width: 100%; padding: 12px; box-sizing: border-box; border-radius: 4px; border: 1px solid #ddd; font-size: 0.95em; line-height: 1.6; resize: vertical; }
+.result-block textarea.analysis-result { background-color: #f1f3f4; min-height: 100px; }
+.result-block textarea.post-version1 { background-color: #fff; min-height: 180px; }
+.result-block textarea.post-version2 { background-color: #e6f4ea; min-height: 180px; }
+
+/* 에러 메시지 */
+.error-message { color: white; background-color: #c53929; padding: 15px; border-radius: 4px; margin-bottom: 20px; text-align: center; font-weight: 500;}
+
+
+/* Main Content Area (Duplicated rules from old structure, review and merge) */
+.main-content { /* This class might be redundant with .main-content-area */
+  flex: 1;
+  padding: 30px; 
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.main-content .page-title-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.main-content .page-title-section h1 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+  font-size: 2.2em;
+}
+.main-content .page-title-section .api-key-warning {
+  color: #d93025;
+  font-weight: bold;
+  border: 1px solid #f5c6cb;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  font-size: 0.9em;
+}
+
+/* Error text generic style */
+.error-text {
+  color: #d93025; 
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+
+.main-content .error-message {
+  color: white;
+  background-color: #c53929;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.main-content .tab-content h3 { /* This class might be redundant with .tab-title */
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+}
+
+
+.main-content .input-section-main label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 1em;
+  color: #333;
+}
+
+.main-content .input-section-main select,
+.main-content .input-section-main input[type="text"], 
+.main-content .input-section-main textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  transition: border-color 0.2s ease-in-out;
+}
+.main-content .input-section-main select:focus,
+.main-content .input-section-main input[type="text"]:focus,
+.main-content .input-section-main textarea:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+
+.main-content .input-section-main textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.main-content .generate-button {
+  padding: 12px 20px;
+  width: 100%;
+  background-color: #34a853; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.main-content .generate-button:hover:not(:disabled) {
+  background-color: #2a8c4a;
+}
+.main-content .generate-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.main-content .loading-message { /* Potentially remove, replaced by .inline-loader */
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.main-content .results-section {
+  margin-top: 30px;
+}
+
+.main-content .result-block {
+  margin-bottom: 30px; 
+}
+
+.main-content .result-block h4 {
+  color: #3c4043; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.main-content .result-block h4 .copy-button {
+  padding: 6px 12px;
+  font-size: 0.85em;
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.main-content .result-block h4 .copy-button:hover {
+  background-color: #d2e3fc;
+}
+
+
+.main-content .result-block textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 0.95em;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.main-content .result-block textarea.analysis-result {
+  background-color: #f1f3f4; 
+  min-height: 100px;
+}
+.main-content .result-block textarea.post-version1 {
+  background-color: #fff; 
+  min-height: 200px; 
+}
+.main-content .result-block textarea.post-version2 {
+  background-color: #e6f4ea; 
+  min-height: 200px; 
+}
+
+/* 탭 버튼 스타일 (Old sidebar style, potentially remove if .tab-navigation is the only tab system) */
+.sidebar .tab-button, .sidebar .active-tab-button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.sidebar .tab-button:hover {
+  background-color: #e0e0e0;
+}
+.sidebar .active-tab-button {
+  background-color: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
+}
+
+/* 댓글 결과 표시 */
+.results-section .result-block textarea[rows="3"] { 
+  min-height: 60px; 
+  margin-bottom: 5px;
+}
+.results-section .result-block .copy-button { 
+  vertical-align: top; 
+  margin-left: 10px;
+}
+
+
+/* Styles for Sentiment Bar (News Reaction) */
+.sentiment-bar-container {
+  margin-bottom: 20px;
+}
+
+#news-summary-sentiment-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+  font-size: 1em;
+}
+
+.sentiment-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  background-color: #e9ecef;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: 20px; 
+}
+
+.sentiment-bar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%; 
+  right: 10%;
+  height: 4px;
+  background-color: #adb5bd;
+  transform: translateY(-50%);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.sentiment-point {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 2px solid #adb5bd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  font-size: 0.85em;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.sentiment-point:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.sentiment-point:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #e9ecef; 
+  border-color: #ced4da;
+}
+
+.sentiment-point.active {
+  transform: scale(1.15);
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.sentiment-point.negative-sentiment.active {
+  background-color: #dc3545;
+  border-color: #c82333;
+  color: white;
+}
+.sentiment-point.neutral-sentiment.active {
+  background-color: #007bff;
+  border-color: #0056b3;
+  color: white;
+}
+.sentiment-point.positive-sentiment.active {
+  background-color: #28a745;
+  border-color: #218838;
+  color: white;
+}
+
+/* Styles for Review Intensity Sliders */
+.review-intensity-controls { 
+  margin-bottom: 20px; 
+  padding: 20px; /* Increased padding */
+  background-color: #f0f4f8; /* Slightly different background */
+  border-radius: 8px; /* More rounded */
+  border: 1px solid #dde2e7; /* Subtle border */
+}
+.intensity-slider { 
+  margin-bottom: 18px; /* More space */
+}
+.intensity-slider:last-child {
+  margin-bottom: 10px; /* Less space if it's the last one before a tip */
+}
+.intensity-slider label { 
+  display: block; 
+  margin-bottom: 8px; /* More space below label */
+  font-weight: 500; 
+  color: #334155; /* Slate color for text */
+  font-size: 0.95em;
+}
+.intensity-slider input[type="range"] { 
+  width: 100%; 
+  cursor: pointer; 
+}
+
+.info-text.small { /* Tip for review intensity */
+  font-size: 0.85em; 
+  color: #475569; /* Slightly darker slate */
+  margin-top: 5px; /* Space from sliders */
+  padding: 8px;
+  background-color: #e7edf2;
+  border-radius: 4px;
+}
+
+
+/* Styles for Automated News Posting Tab */
+.auto-post-section h4 { 
+    color: #1a73e8; 
+    font-size: 1.4em; 
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+.auto-post-section .input-section-main { 
+    padding: 20px; 
+}
+
+.category-selection-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+.category-selection-section h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1em;
+}
+.category-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.category-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.category-checkbox-label:hover {
+  background-color: #f0f0f0;
+}
+.category-checkbox-label input[type="checkbox"] {
+  cursor: pointer;
+}
+.category-checkbox-label input[type="checkbox"]:checked + span { /* Example if text is in a span */
+  font-weight: bold;
+}
+.category-checkbox-label input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+.category-checkbox-label input[type="checkbox"]:disabled + span {
+  opacity: 0.7;
+}
+
+
+.auto-posts-results-container h4 {
+  font-size: 1.3em; /* Consistent with other section titles */
+  color: #1a73e8;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+/* New Auto-Post Card Styles */
+.auto-post-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.auto-post-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Enhanced hover */
+}
+.auto-post-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e7e7e7; /* Lighter dashed border */
+}
+.post-category-badge {
+  background-color: #e8f0fe; /* Light blue */
+  color: #1a73e8; /* Primary blue */
+  padding: 6px 12px; /* Slightly more padding */
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-transform: uppercase; /* Uppercase for a badge feel */
+  letter-spacing: 0.5px;
+}
+.auto-post-copy-button { 
+  font-size: 0.8em !important;
+  padding: 5px 10px !important;
+  background-color: #f0f0f0 !important; /* Lighter background */
+  color: #333 !important;
+  border: 1px solid #ccc !important;
+}
+.auto-post-copy-button:hover {
+  background-color: #e0e0e0 !important;
+}
+
+.original-news-section, .generated-post-section {
+  margin-bottom: 15px;
+}
+.original-news-section:last-child, .generated-post-section:last-child {
+  margin-bottom: 0; /* Remove margin for the last section in card */
+}
+
+.original-news-label, .generated-post-label {
+  font-size: 0.75em; /* Smaller label */
+  color: #667085; /* Grayish blue */
+  margin-bottom: 6px; /* Increased space */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.original-news-title { 
+  font-size: 1.05em; /* Slightly smaller */
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.original-news-title a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+.original-news-title a:hover {
+  text-decoration: underline;
+}
+.generated-post-title-display { 
+  font-size: 1.15em; /* Slightly smaller but still prominent */
+  color: #1d2939; /* Darker slate */
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.generated-post-body-display {
+  font-size: 0.9em; /* Slightly smaller for body */
+  line-height: 1.65; /* Improved line height */
+  color: #344054; /* Darker gray slate */
+  white-space: pre-wrap; 
+  background-color: #f9fafb; /* Very light gray */
+  padding: 12px 15px; /* More padding */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #e4e7eb; /* Subtle border */
+}
+
+
+/* Google News Fetch Section Styles within Auto-Gen Tab */
+.google-news-fetch-section {
+  border: 1px solid #4285F4; 
+  padding: 20px;
+  margin-top: 10px; 
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #e8f0fe; 
+}
+.google-news-fetch-section label {
+    font-weight: 600; 
+}
+
+.fetch-google-news-button {
+  background-color: #1a73e8 !important; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px; 
+  font-size: 0.95em !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  flex-shrink: 0;
+  height: 44px; 
+  box-sizing: border-box;
+}
+.fetch-google-news-button:hover:not(:disabled) {
+  background-color: #1558b0 !important;
+}
+.fetch-google-news-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* News Sources Display Section */
+.news-sources-section {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f0f8ff; 
+  border: 1px solid #cfe2f3; 
+  border-radius: 5px;
+}
+
+.news-sources-section h5 { 
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #0056b3; 
+  font-size: 1.1em; /* Ensure it's distinct */
+}
+
+.news-sources-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  max-height: 150px; 
+  overflow-y: auto;
+}
+
+.news-sources-list li {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.news-sources-list li a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.news-sources-list li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Updated warning style for Gemini Search usage */
+.api-info-warning {
+  font-size: 0.85em;
+  color: #333;
+  background-color: #e6f7ff; 
+  border: 1px solid #91d5ff; 
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.api-info-warning strong {
+    color: #0050b3; 
+    display: block;
+    margin-bottom: 5px;
+}
+.api-info-warning a {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+.api-info-warning a:hover {
+    color: #002171;
+}
+
+.api-info-warning ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.api-info-warning li {
+  margin-bottom: 5px;
+}
+
+/* Status messages for in-tab progress (deprecated, use .inline-loader or .status-message) */
+.auto-generation-status,
+.manual-post-generation-status {
+  /* These specific classes are now less used, replaced by inline-loader or status-message */
+  /* Styles here can be defaults if the class is still used without a spinner */
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e9ecef; 
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  color: #495057; 
+  border: 1px solid #ced4da; 
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; 
+  }
+
+  .main-content-area {
+    padding: 15px;
+  }
+  .input-section-main, .auto-post-section { 
+    padding: 15px;
+  }
+   .auto-post-section h4 {
+    font-size: 1.2em;
+  }
+
+  .page-title-section h1 { /* This class might not exist if .app-title is used */
+    font-size: 1.8em; 
+  }
+  .page-title-section p {
+    font-size: 0.9em;
+  }
+
+  .tab-navigation {
+    padding-bottom: 10px; 
+    gap: 5px;
+  }
+  .tab-navigation .tab,
+  .tab-navigation .active-tab {
+    padding: 10px 12px; 
+    font-size: 0.9em;   
+  }
+
+  .tab-title {
+    font-size: 1.5em; 
+    margin-bottom: 20px;
+  }
+
+  /* --- Prompt Settings Tab --- */
+  .tab-pane .sidebar-section { 
+    padding: 20px; 
+  }
+  .tab-pane .sidebar-section label {
+    font-size: 0.85em;
+  }
+  .tab-pane .sidebar-section input[type="text"],
+  .tab-pane .sidebar-section textarea {
+    padding: 10px 12px; 
+    font-size: 0.9em;
+  }
+
+  .tab-pane .button-group {
+    flex-direction: column;
+  }
+  .tab-pane .button-group button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .tab-pane .button-group button:last-child {
+    margin-bottom: 0;
+  }
+  .tab-pane .community-list li {
+    padding: 10px 12px; 
+    font-size: 0.9em;
+  }
+  .tab-pane .community-list li.selected {
+    padding-left: 9px; 
+  }
+
+
+  /* --- Post Generation Tab --- */
+  /* .post-generation-controls no longer exists with that name, review if needed */
+
+  .sentiment-bar {
+    padding: 6px;
+  }
+  .sentiment-point {
+    width: 40px;
+    height: 40px;
+    font-size: 0.75em;
+  }
+  .review-intensity-controls {
+    padding: 15px;
+  }
+  .intensity-slider label {
+    font-size: 0.9em;
+  }
+
+  .result-block textarea.post-version1,
+  .result-block textarea.post-version2 {
+    min-height: 150px; 
+  }
+
+
+  /* --- Auto Generation Tab (Automated News Posting) --- */
+  .google-news-fetch-section div[style*="display: flex"] { /* The flex container for input and button */
+     flex-direction: column;
+     gap: 10px; 
+  }
+  .google-news-fetch-section input[type="text"] {
+      margin-bottom: 0 !important; 
+  }
+  .fetch-google-news-button {
+    width: 100%;
+    margin-top: 0 !important; 
+    padding: 12px 15px !important;
+  }
+
+  .category-selection-section {
+    padding: 10px;
+  }
+  .category-checkbox-label {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+
+  .inline-loader, .status-message { /* General style for inline status on mobile */
+    font-size: 0.85em;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+  .inline-loader::before {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
+
+
+  .api-info-warning {
+    font-size: 0.8em;
+  }
+
+  .news-sources-section {
+    padding: 10px;
+  }
+  .news-sources-list li {
+    font-size: 0.85em;
+  }
+
+  .auto-post-card {
+    padding: 15px;
+  }
+  .auto-post-card-header {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .post-category-badge {
+    padding: 4px 8px;
+    font-size: 0.75em;
+  }
+  .original-news-label, .generated-post-label {
+    font-size: 0.7em;
+  }
+  .original-news-title {
+    font-size: 1em;
+  }
+  .generated-post-title-display {
+    font-size: 1.05em;
+  }
+  .generated-post-body-display {
+    font-size: 0.85em;
+    padding: 10px;
+  }
+
+
+  /* --- Lab Tab --- */
+  .input-section-main label,
+  .main-content .input-section-main label {
+    font-size: 0.95em;
+  }
+  .input-section-main select,
+  .input-section-main input[type="text"],
+  .input-section-main textarea,
+  .main-content .input-section-main select,
+  .main-content .input-section-main input[type="text"],
+  .main-content .input-section-main textarea {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+
+  .result-block h4 {
+    font-size: 1.1em;
+  }
+  .result-block h4 .copy-button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+  .result-block textarea,
+  .main-content .result-block textarea {
+    font-size: 0.9em;
+  }
+  .result-block textarea.analysis-result {
+    min-height: 80px;
+  }
+  .results-section .result-block textarea[rows="3"] {
+    min-height: 50px;
+  }
+
+
+  /* --- General Interactive Elements --- */
+  button.generate-button,
+  .main-content .generate-button {
+    padding: 12px 15px;
+    font-size: 1em;
+  }
+
+  /* Footer */
+  footer p { /* If a footer exists */
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens if needed */
+  .app-title { /* Changed from .page-title-section h1 */
+    font-size: 1.5em;
+  }
+  .tab-navigation .tab,
+  .tab-navigation .active-tab {
+    padding: 8px 10px;
+    font-size: 0.8em;
+  }
+  .tab-title {
+    font-size: 1.3em;
+  }
+  .sentiment-point {
+    width: 35px;
+    height: 35px;
+    font-size: 0.7em;
+  }
+  .intensity-slider label {
+    font-size: 0.85em;
+  }
+  .info-text.small {
+    font-size: 0.8em;
+  }
+  .api-info-warning {
+    font-size: 0.75em;
+  }
+   .api-info-warning ul {
+    margin-left: 15px; 
+  }
+  .inline-loader, .status-message {
+    font-size: 0.8em;
+  }
+
+
+  .result-block textarea.post-version1,
+  .result-block textarea.post-version2 {
+    min-height: 120px;
+  }
+  .generated-post-body-display {
+    min-height: 100px; 
+  }
+}
